@@ -11,6 +11,7 @@
     <modules>
         <module>ztc-manager-common</module>
         <module>ztc-manager-service</module>
+        <module>ztc-manager-api</module>
     </modules>
 
 

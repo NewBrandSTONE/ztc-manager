@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ztc.www.mapper.SysUserMapper">
+
+    <resultMap id="BaseResultMap" type="com.ztc.manager.module.SysUser">
+        <id column="id" jdbcType="VARCHAR" property="id"/>
+        <result column="sys_username" jdbcType="VARCHAR" property="sysUserName"/>
+    </resultMap>
+
+    <select id="findUserByName" parameterType="String" resultMap="BaseResultMap">
+      SELECT
+        *
+      FROM
+        sys_user_info
+      WHERE
+        sys_username = #{sysUserName, jdbcType=VARCHAR} limit 1
+    </select>
+
+</mapper>
